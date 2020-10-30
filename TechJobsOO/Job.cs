@@ -42,7 +42,7 @@ namespace TechJobsOO
 
         public override string ToString()
         {
-            return "\n" + "\n";
+            return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
         }
     }
     
