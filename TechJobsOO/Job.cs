@@ -42,10 +42,29 @@ namespace TechJobsOO
 
         public override string ToString()
         {
-            if (Name == "")
+            string errorMessage = "Data not available";
+            //string stringy = "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+            if (Name == "" || (Name is null))
             {
-                Name = "Data not available";
-                return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+
+                return "\n" + "ID: " + Id + "\n" + "Name: " + errorMessage + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+            }
+            else if (EmployerName.Value == "" || (EmployerName.Value is null))
+            {
+
+                return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + errorMessage + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+            }
+            else if (EmployerLocation.Value == "" || (EmployerLocation.Value is null))
+            {
+                return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + errorMessage + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+            }
+            else if (JobType.Value == "" || (JobType.Value is null))
+            {
+                return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + errorMessage + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
+            }
+            else if (JobCoreCompetency.Value == "" || (JobCoreCompetency is null))
+            {
+                return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + errorMessage + "\n";
             }
             else
             {
