@@ -66,6 +66,10 @@ namespace TechJobsOO
             {
                 return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + errorMessage + "\n";
             }
+            else if ((Name is null) && (EmployerName is null) && (EmployerLocation is null) && (JobType.Value is null) && (JobCoreCompetency.Value is null))
+            {
+                return "OOPS! This job does not seem to exist.";
+            }
             else
             {
                 return "\n" + "ID: " + Id + "\n" + "Name: " + Name + "\n" + "Employer: " + EmployerName + "\n" + "Location: " + EmployerLocation + "\n" + "Position Type: " + JobType + "\n" + "Core Competency: " + JobCoreCompetency + "\n";
